@@ -5,6 +5,7 @@ import { ResumeForm } from "@/components/builder/ResumeForm";
 import { ResumePreview } from "@/components/builder/ResumePreview";
 import { Sparkles, Download, LayoutTemplate } from "lucide-react";
 import { useReactToPrint } from "react-to-print";
+import Link from "next/link";
 
 export default function BuilderPage() {
   const [activeTab, setActiveTab] = useState<"edit" | "preview">("edit");
@@ -19,12 +20,12 @@ export default function BuilderPage() {
     <div className="h-screen flex flex-col bg-zinc-50 dark:bg-zinc-950 overflow-hidden">
       {/* Builder Top Nav */}
       <header className="h-16 border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-6 flex items-center justify-between shrink-0">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
           <span className="text-xl font-outfit font-bold">DuraCV Builder</span>
-        </div>
+        </Link>
 
         {/* Mobile Tabs */}
         <div className="md:hidden flex bg-zinc-100 dark:bg-zinc-800 p-1 rounded-lg">
