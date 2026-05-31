@@ -3,16 +3,16 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  apiKey: "AIzaSyBaOAPDNrRdU76vFRmbaSrQSiUNy6Pgv2A",
+  authDomain: "resume-builder-760fe.firebaseapp.com",
+  projectId: "resume-builder-760fe",
+  storageBucket: "resume-builder-760fe.firebasestorage.app",
+  messagingSenderId: "161525878020",
+  appId: "1:161525878020:web:50c6b659a8788064841451"
 };
 
-// Initialize Firebase only if config is present to prevent errors during development without keys
-const app = getApps().length > 0 ? getApp() : (firebaseConfig.apiKey ? initializeApp(firebaseConfig) : null);
+// Initialize Firebase
+const app = getApps().length > 0 ? getApp() : initializeApp(firebaseConfig);
 
 export const auth = app ? getAuth(app) : null;
 export const db = app ? getFirestore(app) : null;
