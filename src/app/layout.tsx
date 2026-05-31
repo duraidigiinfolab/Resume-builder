@@ -71,9 +71,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-gray-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 font-sans selection:bg-indigo-500/30">
         {children}
       </body>
-      {process.env.NEXT_PUBLIC_GA_ID && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-      )}
+      <GoogleAnalytics gaId="G-ETSV36K6YN" />
     </html>
   );
 }
